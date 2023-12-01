@@ -1,0 +1,121 @@
+
+
+.footer{
+  background-color:#000;
+}
+
+.footer-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:120px 20px 60px 20px ;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+.footer-texto{
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: #cccccc;
+}
+.footer-contato li{
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  color: #ffff;
+  margin-bottom: 30px;
+
+}
+.footer-copy{
+  grid-column: 1/-1;
+  font-size: 1.5rem;
+  color: #4a4a4a;
+  text-align: center;
+}
+@media (max-width: 800px){
+  .footer-container{
+grid-template-columns: 1fr;
+gap: 40px;
+  }
+  .footer-contato li{
+    font-size:1.5rem ;
+  }
+}
+.footer-contato {
+  display: flex;
+  gap: 20px;
+}
+.linkedin i{
+ font-size: 3rem;
+}
+.github{
+  background-color: #ffffff;
+}
+
+html,body{
+  scroll-behavior: smooth;
+}
+
+.topo i{
+ font-size: 4rem;
+ color:#ffffff;
+}
+.topo{
+  background-color:transparent;
+  border: 6px solid rgb(255, 255, 255);
+  position: fixed;
+  bottom: 50px;
+  right: 200px;
+  border-radius: 50%;
+  display: flex;
+}
+.show-buton .topo {
+  right: 20px;
+}
+/*quebra do botao volta ao topo*/
+@media(max-width: 1500px){
+  .topo{
+    right:10px ;
+  }
+}
+/*animacao botao volta ao topo*/
+.topo i{
+  transform: translate(0px);
+animation: float 3s ease-out infinite;
+}
+@keyframes float{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-40px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+/*animacao loanding*/
+
+.loading::after{
+  display: inline-block;
+  gap: 5px;
+  content: '';
+  position: absolute;
+  animation: loading 2s infinite;
+}
+@keyframes loading{
+  
+  0%{
+    content: '';
+  }
+  33.3%{
+    content: '.';
+  }
+  66.6%{
+    content: '..';
+  }
+  100%{
+    content: '...';
+  }
+  
+}
