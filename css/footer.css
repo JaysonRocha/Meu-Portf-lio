@@ -119,3 +119,10 @@ animation: float 3s ease-out infinite;
   }
   
 }
+
+@media (max-width: 800px){
+  .email{
+margin-left: -35px;
+  }
+ 
+}
